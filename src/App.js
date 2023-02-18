@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 function App() {
+  React.useEffect(() => {
+    fetch('https://api.fantasynerds.com/v1/nfl/depth?apikey=DDRJBZADV6DV68D5VUHE')           
+      .then(response => response.json())
+      .then(data => console.log(data));
+  }, [])
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Football</h1>
+      
     </div>
   );
 }
