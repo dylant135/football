@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   React.useEffect(() => {
-    fetch('https://api.fantasynerds.com/v1/nfl/depth?apikey=DDRJBZADV6DV68D5VUHE')           
+    fetch('https://api.fantasynerds.com/v1/nfl/depth?apikey=TEST')           
       .then(response => response.json())
       .then(data => console.log(data));
   }, [])
